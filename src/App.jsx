@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Plus, StickyNote } from "lucide-react";
+import {Search, Plus, StickyNote} from "lucide-react";
 import NotesCard from "./components/NotesCard";
+
 const App = () => {
   const [notes, setNotes] = useState([
     { id: 1, title: "Subscribe" },
@@ -29,15 +30,21 @@ const App = () => {
         <h1 className="text-5xl font-bold flex items-center gap-3 text-yellow-400 ">
          NOTEPAD  APP <StickyNote size={35} className="text-yellow-400" /> 
         </h1>
+
         <p className="font-semibold text-gray-400 text-lg text-center">
           Write the content
         </p>
+       
+        <h1 className="text-2xl text-black font-bold">
+           Search <Search size={50} className="text-red-400"/></h1>
       </div>
+
+       
       <div
         className="flex flex-col items-center gap-2 mt-12 w-full bg-gradient-to-br from-orange-600 to-pink-500 rounded-lg p-8 shadow-lg cursor-pointer hover:scale-102 transition-all duration-300 ease-in-out"
         onClick={() => setIsToggle(true)}
       >
-        <Plus size={50} />
+               <Plus size={50} />
         <h1 className="text-2xl text-white font-bold"> Notes Add</h1>
       </div>
       {isToggle ? (
